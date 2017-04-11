@@ -6,10 +6,10 @@ import boto3
 import json
 
 #Variables that contains the user credentials to access Twitter API
-access_token = "845678422055702528-NUbK2Y5WBN5pCfIXYvyVJYDK0CutoBY"
-access_token_secret = "ofCS6WmzYeVS3LUuT9T29x9RygY49o5DCO68mkWGhwcD4"
-consumer_key = "yH6mdNG3JRtOX2DdF4PmzA4LN"
-consumer_secret = "MbJ9zu5dcOl0JNfru2pQLG0sf17vwVrYmgrsDcteWHLLynglQ1"
+access_token = "-"
+access_token_secret = "-"
+consumer_key = "-"
+consumer_secret = "-"
 
 #Listener that pushes data to kinesis and prints received tweets to stdout.
 class StdOutListener(StreamListener):
@@ -30,12 +30,12 @@ class StdOutListener(StreamListener):
 
 if __name__ == '__main__':
     client = boto3.client('kinesis', region_name="us-east-1",
-                          aws_access_key_id='AKIAIQBSVCBK7NSDWCFQ',
-                          aws_secret_access_key='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')
+                          aws_access_key_id='-',
+                          aws_secret_access_key='-')
 
     kinesis = boto3.client('kinesis', region_name="us-east-1",
-                           aws_access_key_id='AKIAIQBSVCBK7NSDWCFQ',
-                           aws_secret_access_key='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')
+                           aws_access_key_id='-',
+                           aws_secret_access_key='-')
 
     # response = client.create_stream(
     #     StreamName='twitter',
